@@ -14,7 +14,7 @@ class ProfileController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'string',
             'user_name' => 'min:4|max:20',
-            'avatar' => 'image',
+            'avatar' => 'dimensions:width=256|dimensions:height=256|image',
             'email' => 'email',
             'password' => 'string'
         ]);
